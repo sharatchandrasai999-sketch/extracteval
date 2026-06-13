@@ -1,0 +1,11 @@
+======= SCANNED DOCUMENT (OCR) =======
+   ***  INV0ICE  ***
+   inv. no.   :   77-ALPHA
+   bill ed  to .....  Redwood Industries
+   d a t e  ::  14/04/2025   (dd/mm)
+   --------------------------------
+   line 1 .... widgets ......  900.00
+   line 2 .... freight .....   45.00
+   --------------------------------
+   GRAND  TOTAL  DUE ......  $ 945.00
+   thank you for your business!

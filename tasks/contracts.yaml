@@ -1,0 +1,17 @@
+name: contracts
+description: Pull key terms from messy contract clauses.
+data: data/contracts.jsonl
+fields:
+  - name: party_a
+    type: string
+    rules: [required]
+  - name: effective_date
+    type: date
+    rules: [required, not_future]
+  - name: value
+    type: number
+    rules: [required, non_negative]
+  - name: governing_law
+    type: enum
+    choices: [US, UK, EU]
+    rules: [required, in_choices]

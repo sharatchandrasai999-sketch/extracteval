@@ -1,0 +1,16 @@
+name: invoices_demo
+description: Live demo set of deliberately messy invoices (emails, OCR noise, odd formats).
+data: data/demo_invoices.jsonl
+fields:
+  - name: invoice_number
+    type: string
+    rules: [required, unique]
+  - name: customer
+    type: string
+    rules: [required]
+  - name: date
+    type: date
+    rules: [required, not_future]
+  - name: total
+    type: number
+    rules: [required, non_negative]

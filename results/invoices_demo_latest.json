@@ -1,0 +1,355 @@
+{
+  "metrics": {
+    "n_cases": 12,
+    "invoice_number_accuracy": 1.0,
+    "customer_accuracy": 0.8333,
+    "date_accuracy": 1.0,
+    "total_accuracy": 0.9167,
+    "exact_match": 0.75,
+    "auto_approve_rate": 0.75,
+    "review_rate": 0.167,
+    "reject_rate": 0.083,
+    "auto_approve_precision": 1.0,
+    "errors_escaped": 0,
+    "n_auto_approved": 9,
+    "task": "invoices_demo",
+    "provider": "mock",
+    "model": "mock-baseline",
+    "total_cost_usd": 0.0,
+    "avg_latency_s": 0.0002,
+    "timestamp": "2026-06-13T00:46:38+00:00"
+  },
+  "rows": [
+    {
+      "id": "d01",
+      "predicted": {
+        "invoice_number": "88213",
+        "customer": "Northwind Traders",
+        "date": "2025-02-14",
+        "total": 1204.75
+      },
+      "expected": {
+        "invoice_number": "88213",
+        "customer": "Northwind Traders",
+        "date": "2025-02-14",
+        "total": 1204.75
+      },
+      "scores": {
+        "invoice_number": true,
+        "customer": true,
+        "date": true,
+        "total": true,
+        "_all": true
+      },
+      "violations": [],
+      "cost": 0.0,
+      "latency": 0.0013,
+      "confidence": 1.0,
+      "decision": "auto_approve"
+    },
+    {
+      "id": "d02",
+      "predicted": {
+        "invoice_number": "4471",
+        "customer": "Saplings Co",
+        "date": "2025-03-09",
+        "total": 389.5
+      },
+      "expected": {
+        "invoice_number": "4471",
+        "customer": "Saplings Co",
+        "date": "2025-03-09",
+        "total": 389.5
+      },
+      "scores": {
+        "invoice_number": true,
+        "customer": true,
+        "date": true,
+        "total": true,
+        "_all": true
+      },
+      "violations": [],
+      "cost": 0.0,
+      "latency": 0.001,
+      "confidence": 1.0,
+      "decision": "auto_approve"
+    },
+    {
+      "id": "d03",
+      "predicted": {
+        "invoice_number": "A-2207",
+        "customer": "Bluewave Systems",
+        "date": "2025-04-03",
+        "total": 7800.0
+      },
+      "expected": {
+        "invoice_number": "A-2207",
+        "customer": "Bluewave Systems",
+        "date": "2025-04-03",
+        "total": 7800.0
+      },
+      "scores": {
+        "invoice_number": true,
+        "customer": true,
+        "date": true,
+        "total": true,
+        "_all": true
+      },
+      "violations": [],
+      "cost": 0.0,
+      "latency": 0.0003,
+      "confidence": 1.0,
+      "decision": "auto_approve"
+    },
+    {
+      "id": "d04",
+      "predicted": {
+        "invoice_number": "1009",
+        "customer": "Meadow Foods",
+        "date": "2025-01-05",
+        "total": null
+      },
+      "expected": {
+        "invoice_number": "1009",
+        "customer": "Meadow Foods",
+        "date": "2025-01-05",
+        "total": 42.0
+      },
+      "scores": {
+        "invoice_number": true,
+        "customer": true,
+        "date": true,
+        "total": false,
+        "_all": false
+      },
+      "violations": [
+        "total: failed 'required' (got None)",
+        "total: failed 'non_negative' (got None)"
+      ],
+      "cost": 0.0,
+      "latency": 0.0,
+      "confidence": 0.0,
+      "decision": "reject"
+    },
+    {
+      "id": "d05",
+      "predicted": {
+        "invoice_number": "55-12",
+        "customer": "ACME WIDGETS LLC",
+        "date": "2025-06-30",
+        "total": 96.0
+      },
+      "expected": {
+        "invoice_number": "55-12",
+        "customer": "ACME WIDGETS LLC",
+        "date": "2025-06-30",
+        "total": 96.0
+      },
+      "scores": {
+        "invoice_number": true,
+        "customer": true,
+        "date": true,
+        "total": true,
+        "_all": true
+      },
+      "violations": [],
+      "cost": 0.0,
+      "latency": 0.0,
+      "confidence": 1.0,
+      "decision": "auto_approve"
+    },
+    {
+      "id": "d06",
+      "predicted": {
+        "invoice_number": "309",
+        "customer": "Cedar Holdings",
+        "date": "2025-07-07",
+        "total": 58.2
+      },
+      "expected": {
+        "invoice_number": "309",
+        "customer": "Cedar Holdings",
+        "date": "2025-07-07",
+        "total": 58.2
+      },
+      "scores": {
+        "invoice_number": true,
+        "customer": true,
+        "date": true,
+        "total": true,
+        "_all": true
+      },
+      "violations": [],
+      "cost": 0.0,
+      "latency": 0.0,
+      "confidence": 1.0,
+      "decision": "auto_approve"
+    },
+    {
+      "id": "d07",
+      "predicted": {
+        "invoice_number": "7700",
+        "customer": null,
+        "date": "2025-08-08",
+        "total": 33.0
+      },
+      "expected": {
+        "invoice_number": "7700",
+        "customer": "Tom's Diner",
+        "date": "2025-08-08",
+        "total": 33.0
+      },
+      "scores": {
+        "invoice_number": true,
+        "customer": false,
+        "date": true,
+        "total": true,
+        "_all": false
+      },
+      "violations": [
+        "customer: failed 'required' (got None)"
+      ],
+      "cost": 0.0,
+      "latency": 0.0,
+      "confidence": 0.35,
+      "decision": "review"
+    },
+    {
+      "id": "d08",
+      "predicted": {
+        "invoice_number": "0042",
+        "customer": null,
+        "date": "2025-12-21",
+        "total": 15250.0
+      },
+      "expected": {
+        "invoice_number": "0042",
+        "customer": "PURPLE LABS",
+        "date": "2025-12-21",
+        "total": 15250.0
+      },
+      "scores": {
+        "invoice_number": true,
+        "customer": false,
+        "date": true,
+        "total": true,
+        "_all": false
+      },
+      "violations": [
+        "customer: failed 'required' (got None)"
+      ],
+      "cost": 0.0,
+      "latency": 0.0,
+      "confidence": 0.35,
+      "decision": "review"
+    },
+    {
+      "id": "d09",
+      "predicted": {
+        "invoice_number": "9001",
+        "customer": "Ironclad Industries",
+        "date": "2025-05-03",
+        "total": 410.0
+      },
+      "expected": {
+        "invoice_number": "9001",
+        "customer": "Ironclad Industries",
+        "date": "2025-05-03",
+        "total": 410.0
+      },
+      "scores": {
+        "invoice_number": true,
+        "customer": true,
+        "date": true,
+        "total": true,
+        "_all": true
+      },
+      "violations": [],
+      "cost": 0.0,
+      "latency": 0.0,
+      "confidence": 1.0,
+      "decision": "auto_approve"
+    },
+    {
+      "id": "d10",
+      "predicted": {
+        "invoice_number": "6543",
+        "customer": "Granite Partners",
+        "date": "2025-02-28",
+        "total": 540.0
+      },
+      "expected": {
+        "invoice_number": "6543",
+        "customer": "Granite Partners",
+        "date": "2025-02-28",
+        "total": 540.0
+      },
+      "scores": {
+        "invoice_number": true,
+        "customer": true,
+        "date": true,
+        "total": true,
+        "_all": true
+      },
+      "violations": [],
+      "cost": 0.0,
+      "latency": 0.0,
+      "confidence": 1.0,
+      "decision": "auto_approve"
+    },
+    {
+      "id": "d11",
+      "predicted": {
+        "invoice_number": "220-B",
+        "customer": "Summit Group",
+        "date": "2025-11-11",
+        "total": 2499.99
+      },
+      "expected": {
+        "invoice_number": "220-B",
+        "customer": "Summit Group",
+        "date": "2025-11-11",
+        "total": 2499.99
+      },
+      "scores": {
+        "invoice_number": true,
+        "customer": true,
+        "date": true,
+        "total": true,
+        "_all": true
+      },
+      "violations": [],
+      "cost": 0.0,
+      "latency": 0.0,
+      "confidence": 1.0,
+      "decision": "auto_approve"
+    },
+    {
+      "id": "d12",
+      "predicted": {
+        "invoice_number": "314159",
+        "customer": "Orbit Systems",
+        "date": "2025-01-01",
+        "total": 3.14
+      },
+      "expected": {
+        "invoice_number": "314159",
+        "customer": "Orbit Systems",
+        "date": "2025-01-01",
+        "total": 3.14
+      },
+      "scores": {
+        "invoice_number": true,
+        "customer": true,
+        "date": true,
+        "total": true,
+        "_all": true
+      },
+      "violations": [],
+      "cost": 0.0,
+      "latency": 0.0,
+      "confidence": 1.0,
+      "decision": "auto_approve"
+    }
+  ]
+}

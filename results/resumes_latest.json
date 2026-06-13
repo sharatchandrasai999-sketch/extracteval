@@ -1,0 +1,194 @@
+{
+  "metrics": {
+    "n_cases": 6,
+    "name_accuracy": 0.8333,
+    "years_experience_accuracy": 1.0,
+    "top_skill_accuracy": 1.0,
+    "seniority_accuracy": 0.6667,
+    "exact_match": 0.5,
+    "auto_approve_rate": 0.5,
+    "review_rate": 0.167,
+    "reject_rate": 0.333,
+    "auto_approve_precision": 1.0,
+    "errors_escaped": 0,
+    "n_auto_approved": 3,
+    "task": "resumes",
+    "provider": "mock",
+    "model": "mock-baseline",
+    "total_cost_usd": 0.0,
+    "avg_latency_s": 0.0,
+    "timestamp": "2026-06-13T00:46:56+00:00"
+  },
+  "rows": [
+    {
+      "id": "res_01",
+      "predicted": {
+        "name": "Jane Okafor",
+        "years_experience": 6,
+        "top_skill": "Python",
+        "seniority": "senior"
+      },
+      "expected": {
+        "name": "Jane Okafor",
+        "years_experience": 6,
+        "top_skill": "Python",
+        "seniority": "senior"
+      },
+      "scores": {
+        "name": true,
+        "years_experience": true,
+        "top_skill": true,
+        "seniority": true,
+        "_all": true
+      },
+      "violations": [],
+      "cost": 0.0,
+      "latency": 0.0,
+      "confidence": 1.0,
+      "decision": "auto_approve"
+    },
+    {
+      "id": "res_02",
+      "predicted": {
+        "name": "Tom Reilly",
+        "years_experience": 0,
+        "top_skill": "React",
+        "seniority": "junior"
+      },
+      "expected": {
+        "name": "Tom Reilly",
+        "years_experience": 0,
+        "top_skill": "React",
+        "seniority": "junior"
+      },
+      "scores": {
+        "name": true,
+        "years_experience": true,
+        "top_skill": true,
+        "seniority": true,
+        "_all": true
+      },
+      "violations": [],
+      "cost": 0.0,
+      "latency": 0.0,
+      "confidence": 1.0,
+      "decision": "auto_approve"
+    },
+    {
+      "id": "res_03",
+      "predicted": {
+        "name": null,
+        "years_experience": 3,
+        "top_skill": "SQL",
+        "seniority": "mid"
+      },
+      "expected": {
+        "name": "Priya Nair",
+        "years_experience": 3,
+        "top_skill": "SQL",
+        "seniority": "mid"
+      },
+      "scores": {
+        "name": false,
+        "years_experience": true,
+        "top_skill": true,
+        "seniority": true,
+        "_all": false
+      },
+      "violations": [
+        "name: failed 'required' (got None)"
+      ],
+      "cost": 0.0,
+      "latency": 0.0,
+      "confidence": 0.35,
+      "decision": "review"
+    },
+    {
+      "id": "res_04",
+      "predicted": {
+        "name": "Marcus Lee",
+        "years_experience": 11,
+        "top_skill": "Kubernetes",
+        "seniority": null
+      },
+      "expected": {
+        "name": "Marcus Lee",
+        "years_experience": 11,
+        "top_skill": "Kubernetes",
+        "seniority": "senior"
+      },
+      "scores": {
+        "name": true,
+        "years_experience": true,
+        "top_skill": true,
+        "seniority": false,
+        "_all": false
+      },
+      "violations": [
+        "seniority: failed 'required' (got None)",
+        "seniority: failed 'in_choices' (got None)"
+      ],
+      "cost": 0.0,
+      "latency": 0.0,
+      "confidence": 0.0,
+      "decision": "reject"
+    },
+    {
+      "id": "res_05",
+      "predicted": {
+        "name": "Aisha Khan",
+        "years_experience": 2,
+        "top_skill": "TypeScript",
+        "seniority": "junior"
+      },
+      "expected": {
+        "name": "Aisha Khan",
+        "years_experience": 2,
+        "top_skill": "TypeScript",
+        "seniority": "junior"
+      },
+      "scores": {
+        "name": true,
+        "years_experience": true,
+        "top_skill": true,
+        "seniority": true,
+        "_all": true
+      },
+      "violations": [],
+      "cost": 0.0,
+      "latency": 0.0,
+      "confidence": 1.0,
+      "decision": "auto_approve"
+    },
+    {
+      "id": "res_06",
+      "predicted": {
+        "name": "Diego Santos",
+        "years_experience": 5,
+        "top_skill": "PyTorch",
+        "seniority": null
+      },
+      "expected": {
+        "name": "Diego Santos",
+        "years_experience": 5,
+        "top_skill": "PyTorch",
+        "seniority": "mid"
+      },
+      "scores": {
+        "name": true,
+        "years_experience": true,
+        "top_skill": true,
+        "seniority": false,
+        "_all": false
+      },
+      "violations": [
+        "seniority: failed 'required' (got None)",
+        "seniority: failed 'in_choices' (got None)"
+      ],
+      "cost": 0.0,
+      "latency": 0.0,
+      "confidence": 0.0,
+      "decision": "reject"
+    }
+  ]
+}

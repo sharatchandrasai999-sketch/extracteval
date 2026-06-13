@@ -1,0 +1,434 @@
+{
+  "metrics": {
+    "n_cases": 15,
+    "invoice_number_accuracy": 1.0,
+    "customer_accuracy": 0.9333,
+    "date_accuracy": 1.0,
+    "total_accuracy": 0.9333,
+    "exact_match": 0.8667,
+    "auto_approve_rate": 0.867,
+    "review_rate": 0.067,
+    "reject_rate": 0.067,
+    "auto_approve_precision": 1.0,
+    "errors_escaped": 0,
+    "n_auto_approved": 13,
+    "task": "invoices",
+    "provider": "mock",
+    "model": "mock-baseline",
+    "total_cost_usd": 0.0,
+    "avg_latency_s": 0.0002,
+    "timestamp": "2026-06-13T00:42:43+00:00"
+  },
+  "rows": [
+    {
+      "id": "inv_01",
+      "predicted": {
+        "invoice_number": "4521",
+        "customer": "Acme Corp",
+        "date": "2025-03-03",
+        "total": 133.0
+      },
+      "expected": {
+        "invoice_number": "4521",
+        "customer": "Acme Corp",
+        "date": "2025-03-03",
+        "total": 133.0
+      },
+      "scores": {
+        "invoice_number": true,
+        "customer": true,
+        "date": true,
+        "total": true,
+        "_all": true
+      },
+      "violations": [],
+      "cost": 0.0,
+      "latency": 0.0018,
+      "confidence": 1.0,
+      "decision": "auto_approve"
+    },
+    {
+      "id": "inv_02",
+      "predicted": {
+        "invoice_number": "9987",
+        "customer": "Beta LLC",
+        "date": "2025-04-14",
+        "total": 240.0
+      },
+      "expected": {
+        "invoice_number": "9987",
+        "customer": "Beta LLC",
+        "date": "2025-04-14",
+        "total": 240.0
+      },
+      "scores": {
+        "invoice_number": true,
+        "customer": true,
+        "date": true,
+        "total": true,
+        "_all": true
+      },
+      "violations": [],
+      "cost": 0.0,
+      "latency": 0.0,
+      "confidence": 1.0,
+      "decision": "auto_approve"
+    },
+    {
+      "id": "inv_03",
+      "predicted": {
+        "invoice_number": "0031",
+        "customer": "Gamma Industries",
+        "date": "2025-01-09",
+        "total": 486.0
+      },
+      "expected": {
+        "invoice_number": "0031",
+        "customer": "Gamma Industries",
+        "date": "2025-01-09",
+        "total": 486.0
+      },
+      "scores": {
+        "invoice_number": true,
+        "customer": true,
+        "date": true,
+        "total": true,
+        "_all": true
+      },
+      "violations": [],
+      "cost": 0.0,
+      "latency": 0.0,
+      "confidence": 1.0,
+      "decision": "auto_approve"
+    },
+    {
+      "id": "inv_04",
+      "predicted": {
+        "invoice_number": "1200",
+        "customer": "Delta Co",
+        "date": "2025-02-28",
+        "total": 0.0
+      },
+      "expected": {
+        "invoice_number": "1200",
+        "customer": "Delta Co",
+        "date": "2025-02-28",
+        "total": 0.0
+      },
+      "scores": {
+        "invoice_number": true,
+        "customer": true,
+        "date": true,
+        "total": true,
+        "_all": true
+      },
+      "violations": [],
+      "cost": 0.0,
+      "latency": 0.0,
+      "confidence": 1.0,
+      "decision": "auto_approve"
+    },
+    {
+      "id": "inv_05",
+      "predicted": {
+        "invoice_number": "7777",
+        "customer": "Epsilon Partners",
+        "date": "2025-05-01",
+        "total": 1299.99
+      },
+      "expected": {
+        "invoice_number": "7777",
+        "customer": "Epsilon Partners",
+        "date": "2025-05-01",
+        "total": 1299.99
+      },
+      "scores": {
+        "invoice_number": true,
+        "customer": true,
+        "date": true,
+        "total": true,
+        "_all": true
+      },
+      "violations": [],
+      "cost": 0.0,
+      "latency": 0.0,
+      "confidence": 1.0,
+      "decision": "auto_approve"
+    },
+    {
+      "id": "inv_06",
+      "predicted": {
+        "invoice_number": "88-A",
+        "customer": "Zeta Holdings",
+        "date": "2025-06-11",
+        "total": 56.4
+      },
+      "expected": {
+        "invoice_number": "88-A",
+        "customer": "Zeta Holdings",
+        "date": "2025-06-11",
+        "total": 56.4
+      },
+      "scores": {
+        "invoice_number": true,
+        "customer": true,
+        "date": true,
+        "total": true,
+        "_all": true
+      },
+      "violations": [],
+      "cost": 0.0,
+      "latency": 0.0,
+      "confidence": 1.0,
+      "decision": "auto_approve"
+    },
+    {
+      "id": "inv_07",
+      "predicted": {
+        "invoice_number": "3050",
+        "customer": "Theta Ltd",
+        "date": "2025-07-07",
+        "total": 800.0
+      },
+      "expected": {
+        "invoice_number": "3050",
+        "customer": "Theta Ltd",
+        "date": "2025-07-07",
+        "total": 800.0
+      },
+      "scores": {
+        "invoice_number": true,
+        "customer": true,
+        "date": true,
+        "total": true,
+        "_all": true
+      },
+      "violations": [],
+      "cost": 0.0,
+      "latency": 0.0003,
+      "confidence": 1.0,
+      "decision": "auto_approve"
+    },
+    {
+      "id": "inv_08",
+      "predicted": {
+        "invoice_number": "0009",
+        "customer": "Iota Systems",
+        "date": "2025-12-12",
+        "total": 4500.0
+      },
+      "expected": {
+        "invoice_number": "0009",
+        "customer": "Iota Systems",
+        "date": "2025-12-12",
+        "total": 4500.0
+      },
+      "scores": {
+        "invoice_number": true,
+        "customer": true,
+        "date": true,
+        "total": true,
+        "_all": true
+      },
+      "violations": [],
+      "cost": 0.0,
+      "latency": 0.0,
+      "confidence": 1.0,
+      "decision": "auto_approve"
+    },
+    {
+      "id": "inv_09",
+      "predicted": {
+        "invoice_number": "2222",
+        "customer": "Kappa Foods",
+        "date": "2025-08-01",
+        "total": 19.99
+      },
+      "expected": {
+        "invoice_number": "2222",
+        "customer": "Kappa Foods",
+        "date": "2025-08-01",
+        "total": 19.99
+      },
+      "scores": {
+        "invoice_number": true,
+        "customer": true,
+        "date": true,
+        "total": true,
+        "_all": true
+      },
+      "violations": [],
+      "cost": 0.0,
+      "latency": 0.0,
+      "confidence": 1.0,
+      "decision": "auto_approve"
+    },
+    {
+      "id": "inv_10",
+      "predicted": {
+        "invoice_number": "A-100",
+        "customer": "Lambda Group",
+        "date": "2025-09-03",
+        "total": 2000.5
+      },
+      "expected": {
+        "invoice_number": "A-100",
+        "customer": "Lambda Group",
+        "date": "2025-09-03",
+        "total": 2000.5
+      },
+      "scores": {
+        "invoice_number": true,
+        "customer": true,
+        "date": true,
+        "total": true,
+        "_all": true
+      },
+      "violations": [],
+      "cost": 0.0,
+      "latency": 0.0001,
+      "confidence": 1.0,
+      "decision": "auto_approve"
+    },
+    {
+      "id": "inv_11",
+      "predicted": {
+        "invoice_number": "6161",
+        "customer": "Mu Traders",
+        "date": "2025-10-10",
+        "total": null
+      },
+      "expected": {
+        "invoice_number": "6161",
+        "customer": "Mu Traders",
+        "date": "2025-10-10",
+        "total": 45.0
+      },
+      "scores": {
+        "invoice_number": true,
+        "customer": true,
+        "date": true,
+        "total": false,
+        "_all": false
+      },
+      "violations": [
+        "total: failed 'required' (got None)",
+        "total: failed 'non_negative' (got None)"
+      ],
+      "cost": 0.0,
+      "latency": 0.0,
+      "confidence": 0.0,
+      "decision": "reject"
+    },
+    {
+      "id": "inv_12",
+      "predicted": {
+        "invoice_number": "5005",
+        "customer": "Nu Enterprises",
+        "date": "2025-11-20",
+        "total": 12750.0
+      },
+      "expected": {
+        "invoice_number": "5005",
+        "customer": "Nu Enterprises",
+        "date": "2025-11-20",
+        "total": 12750.0
+      },
+      "scores": {
+        "invoice_number": true,
+        "customer": true,
+        "date": true,
+        "total": true,
+        "_all": true
+      },
+      "violations": [],
+      "cost": 0.0,
+      "latency": 0.0,
+      "confidence": 1.0,
+      "decision": "auto_approve"
+    },
+    {
+      "id": "inv_13",
+      "predicted": {
+        "invoice_number": "70",
+        "customer": "Xi Co",
+        "date": "2025-04-04",
+        "total": 999.99
+      },
+      "expected": {
+        "invoice_number": "70",
+        "customer": "Xi Co",
+        "date": "2025-04-04",
+        "total": 999.99
+      },
+      "scores": {
+        "invoice_number": true,
+        "customer": true,
+        "date": true,
+        "total": true,
+        "_all": true
+      },
+      "violations": [],
+      "cost": 0.0,
+      "latency": 0.0,
+      "confidence": 1.0,
+      "decision": "auto_approve"
+    },
+    {
+      "id": "inv_14",
+      "predicted": {
+        "invoice_number": "0500",
+        "customer": "Omicron Inc",
+        "date": "2025-01-01",
+        "total": 0.0
+      },
+      "expected": {
+        "invoice_number": "0500",
+        "customer": "Omicron Inc",
+        "date": "2025-01-01",
+        "total": 0.0
+      },
+      "scores": {
+        "invoice_number": true,
+        "customer": true,
+        "date": true,
+        "total": true,
+        "_all": true
+      },
+      "violations": [],
+      "cost": 0.0,
+      "latency": 0.0,
+      "confidence": 1.0,
+      "decision": "auto_approve"
+    },
+    {
+      "id": "inv_15",
+      "predicted": {
+        "invoice_number": "314",
+        "customer": null,
+        "date": "2025-03-15",
+        "total": 3141.59
+      },
+      "expected": {
+        "invoice_number": "314",
+        "customer": "Pi Labs",
+        "date": "2025-03-15",
+        "total": 3141.59
+      },
+      "scores": {
+        "invoice_number": true,
+        "customer": false,
+        "date": true,
+        "total": true,
+        "_all": false
+      },
+      "violations": [
+        "customer: failed 'required' (got None)"
+      ],
+      "cost": 0.0,
+      "latency": 0.0,
+      "confidence": 0.35,
+      "decision": "review"
+    }
+  ]
+}

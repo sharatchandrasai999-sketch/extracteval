@@ -1,0 +1,193 @@
+{
+  "metrics": {
+    "n_cases": 6,
+    "party_a_accuracy": 0.6667,
+    "effective_date_accuracy": 0.8333,
+    "value_accuracy": 1.0,
+    "governing_law_accuracy": 1.0,
+    "exact_match": 0.5,
+    "auto_approve_rate": 0.5,
+    "review_rate": 0.333,
+    "reject_rate": 0.167,
+    "auto_approve_precision": 1.0,
+    "errors_escaped": 0,
+    "n_auto_approved": 3,
+    "task": "contracts",
+    "provider": "mock",
+    "model": "mock-baseline",
+    "total_cost_usd": 0.0,
+    "avg_latency_s": 0.0,
+    "timestamp": "2026-06-13T00:46:58+00:00"
+  },
+  "rows": [
+    {
+      "id": "con_01",
+      "predicted": {
+        "party_a": null,
+        "effective_date": "2025-01-15",
+        "value": 250000,
+        "governing_law": "UK"
+      },
+      "expected": {
+        "party_a": "Apex Logistics Ltd",
+        "effective_date": "2025-01-15",
+        "value": 250000,
+        "governing_law": "UK"
+      },
+      "scores": {
+        "party_a": false,
+        "effective_date": true,
+        "value": true,
+        "governing_law": true,
+        "_all": false
+      },
+      "violations": [
+        "party_a: failed 'required' (got None)"
+      ],
+      "cost": 0.0,
+      "latency": 0.0001,
+      "confidence": 0.35,
+      "decision": "review"
+    },
+    {
+      "id": "con_02",
+      "predicted": {
+        "party_a": "Northstar Media Inc",
+        "effective_date": "2025-03-01",
+        "value": 1200000,
+        "governing_law": "US"
+      },
+      "expected": {
+        "party_a": "Northstar Media Inc",
+        "effective_date": "2025-03-01",
+        "value": 1200000,
+        "governing_law": "US"
+      },
+      "scores": {
+        "party_a": true,
+        "effective_date": true,
+        "value": true,
+        "governing_law": true,
+        "_all": true
+      },
+      "violations": [],
+      "cost": 0.0,
+      "latency": 0.0,
+      "confidence": 1.0,
+      "decision": "auto_approve"
+    },
+    {
+      "id": "con_03",
+      "predicted": {
+        "party_a": "Bluefin GmbH",
+        "effective_date": "2025-04-07",
+        "value": 90000,
+        "governing_law": "EU"
+      },
+      "expected": {
+        "party_a": "Bluefin GmbH",
+        "effective_date": "2025-04-07",
+        "value": 90000,
+        "governing_law": "EU"
+      },
+      "scores": {
+        "party_a": true,
+        "effective_date": true,
+        "value": true,
+        "governing_law": true,
+        "_all": true
+      },
+      "violations": [],
+      "cost": 0.0,
+      "latency": 0.0,
+      "confidence": 1.0,
+      "decision": "auto_approve"
+    },
+    {
+      "id": "con_04",
+      "predicted": {
+        "party_a": null,
+        "effective_date": "2025-06-30",
+        "value": 45000,
+        "governing_law": "US"
+      },
+      "expected": {
+        "party_a": "Cedar & Stone LLC",
+        "effective_date": "2025-06-30",
+        "value": 45000,
+        "governing_law": "US"
+      },
+      "scores": {
+        "party_a": false,
+        "effective_date": true,
+        "value": true,
+        "governing_law": true,
+        "_all": false
+      },
+      "violations": [
+        "party_a: failed 'required' (got None)"
+      ],
+      "cost": 0.0,
+      "latency": 0.0,
+      "confidence": 0.35,
+      "decision": "review"
+    },
+    {
+      "id": "con_05",
+      "predicted": {
+        "party_a": "Helios Energy S.A.",
+        "effective_date": "2025-12-12",
+        "value": 2500000,
+        "governing_law": "EU"
+      },
+      "expected": {
+        "party_a": "Helios Energy S.A.",
+        "effective_date": "2025-12-12",
+        "value": 2500000,
+        "governing_law": "EU"
+      },
+      "scores": {
+        "party_a": true,
+        "effective_date": true,
+        "value": true,
+        "governing_law": true,
+        "_all": true
+      },
+      "violations": [],
+      "cost": 0.0,
+      "latency": 0.0,
+      "confidence": 1.0,
+      "decision": "auto_approve"
+    },
+    {
+      "id": "con_06",
+      "predicted": {
+        "party_a": "Tartan Software Limited",
+        "effective_date": null,
+        "value": 12000,
+        "governing_law": "UK"
+      },
+      "expected": {
+        "party_a": "Tartan Software Limited",
+        "effective_date": "2025-08-01",
+        "value": 12000,
+        "governing_law": "UK"
+      },
+      "scores": {
+        "party_a": true,
+        "effective_date": false,
+        "value": true,
+        "governing_law": true,
+        "_all": false
+      },
+      "violations": [
+        "effective_date: failed 'required' (got None)",
+        "effective_date: failed 'not_future' (got None)"
+      ],
+      "cost": 0.0,
+      "latency": 0.0,
+      "confidence": 0.0,
+      "decision": "reject"
+    }
+  ]
+}

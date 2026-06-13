@@ -1,0 +1,17 @@
+name: resumes
+description: Pull a candidate summary out of free-form resume text.
+data: data/resumes.jsonl
+fields:
+  - name: name
+    type: string
+    rules: [required]
+  - name: years_experience
+    type: number
+    rules: [required, non_negative]
+  - name: top_skill
+    type: string
+    rules: [required]
+  - name: seniority
+    type: enum
+    choices: [junior, mid, senior]
+    rules: [required, in_choices]

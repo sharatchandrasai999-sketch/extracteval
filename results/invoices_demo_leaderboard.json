@@ -1,0 +1,22 @@
+[
+  {
+    "n_cases": 12,
+    "invoice_number_accuracy": 1.0,
+    "customer_accuracy": 0.8333,
+    "date_accuracy": 1.0,
+    "total_accuracy": 0.9167,
+    "exact_match": 0.75,
+    "auto_approve_rate": 0.75,
+    "review_rate": 0.167,
+    "reject_rate": 0.083,
+    "auto_approve_precision": 1.0,
+    "errors_escaped": 0,
+    "n_auto_approved": 9,
+    "task": "invoices_demo",
+    "provider": "mock",
+    "model": "mock-baseline",
+    "total_cost_usd": 0.0,
+    "avg_latency_s": 0.0002,
+    "timestamp": "2026-06-13T00:42:43+00:00"
+  }
+]
