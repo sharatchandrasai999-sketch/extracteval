@@ -51,6 +51,8 @@ def cmd_compare(args):
 
 def cmd_try(args):
     task = load_task(args.task)
+    if not args.text.strip():
+        print("warning: empty --text - nothing to extract", file=sys.stderr)
     fn = get_provider(args.provider)
     if args.provider == "mock":
         out, cost, _ = fn(args.text, task, None)
