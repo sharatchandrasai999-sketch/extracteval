@@ -14,6 +14,9 @@ extracteval try     tasks/invoices.yaml --text "INVOICE #42 for Acme, 3 Mar 2025
 Runs out of the box with **no API key** via an offline provider, so anyone can
 clone it and see real numbers in one command.
 
+![ExtractEval scoring 15 invoice cases with supervisor routing](extracteval_demo.png)
+
+
 ---
 
 ## The idea
