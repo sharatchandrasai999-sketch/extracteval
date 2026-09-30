@@ -2,7 +2,10 @@
 import argparse
 import json
 
-from extracteval.cli import cmd_try
+import pytest
+
+from extracteval import __version__
+from extracteval.cli import cmd_try, main
 
 
 def _args(text):
@@ -26,3 +29,12 @@ def test_try_quiet_on_real_text(capsys):
     assert "warning" not in captured.err
     out = json.loads(captured.out)
     assert set(out) == {"invoice_number", "customer", "date", "total"}
+
+
+def test_version_flag(capsys):
+    with pytest.raises(SystemExit) as exc:
+        main(["--version"])
+    assert exc.value.code == 0
+    out = capsys.readouterr().out
+    assert "extracteval" in out
+    assert __version__ in out
