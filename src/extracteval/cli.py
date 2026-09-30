@@ -11,6 +11,7 @@ import sys
 import json
 import argparse
 
+from . import __version__
 from .schema import load_task
 from .extract import get_provider
 from .runner import run_eval, compare, save_results
@@ -43,7 +44,6 @@ def cmd_compare(args):
     task = load_task(args.task)
     specs = _parse_specs(args.providers)
     board = compare(task, specs)
-    print_leaderboard(task, board)
     os.makedirs(RESULTS_DIR, exist_ok=True)
     with open(os.path.join(RESULTS_DIR, f"{task.name}_leaderboard.json"), "w") as fh:
         json.dump(board, fh, indent=2)
@@ -67,6 +67,8 @@ def cmd_try(args):
 def main(argv=None):
     p = argparse.ArgumentParser(prog="extracteval",
                                 description="Schema-driven extraction + evaluation.")
+    p.add_argument("--version", action="version",
+                   version=f"%(prog)s {__version__}")
     sub = p.add_subparsers(dest="cmd", required=True)
 
     r = sub.add_parser("run", help="run an eval for one provider")
