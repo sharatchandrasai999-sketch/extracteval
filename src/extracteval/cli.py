@@ -47,6 +47,7 @@ def cmd_compare(args):
     os.makedirs(RESULTS_DIR, exist_ok=True)
     with open(os.path.join(RESULTS_DIR, f"{task.name}_leaderboard.json"), "w") as fh:
         json.dump(board, fh, indent=2)
+    print_leaderboard(task, board)
 
 
 def cmd_try(args):

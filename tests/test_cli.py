@@ -1,11 +1,12 @@
 """Tests for CLI input handling."""
 import argparse
 import json
+from pathlib import Path
 
 import pytest
 
 from extracteval import __version__
-from extracteval.cli import cmd_try, main
+from extracteval.cli import cmd_compare, cmd_try, main
 
 
 def _args(text):
@@ -38,3 +39,12 @@ def test_version_flag(capsys):
     out = capsys.readouterr().out
     assert "extracteval" in out
     assert __version__ in out
+
+
+def test_compare_prints_leaderboard(capsys, tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
+    task_path = Path(__file__).resolve().parent.parent / "tasks" / "invoices.yaml"
+    cmd_compare(argparse.Namespace(task=str(task_path), providers="mock"))
+    out = capsys.readouterr().out
+    assert "Leaderboard" in out
+    assert "invoices" in out
