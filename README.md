@@ -16,6 +16,14 @@ clone it and see real numbers in one command.
 
 ![ExtractEval scoring 15 invoice cases with supervisor routing](extracteval_demo.png)
 
+## Demo
+
+A real terminal run with the mock provider, no API key:
+
+![ExtractEval demo video](demo.mp4)
+
+Or try it live in your browser, no install: [portfolio demos](https://sharatchandrasai999-sketch.github.io/#demos)
+
 
 ---
 
