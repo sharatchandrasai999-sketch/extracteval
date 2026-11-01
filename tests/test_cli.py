@@ -9,8 +9,11 @@ from extracteval import __version__
 from extracteval.cli import cmd_compare, cmd_try, main
 
 
+TASK = Path(__file__).resolve().parent.parent / "tasks" / "invoices.yaml"
+
+
 def _args(text):
-    return argparse.Namespace(task="tasks/invoices.yaml", text=text,
+    return argparse.Namespace(task=str(TASK), text=text,
                               provider="mock", model=None)
 
 
