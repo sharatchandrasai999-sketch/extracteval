@@ -1,5 +1,6 @@
-from extracteval.schema import Task, Field
-from extracteval.confidence import score_confidence, route, routing_summary
+from extracteval.confidence import route, routing_summary, score_confidence
+from extracteval.schema import Field, Task
+
 
 def _task():
     return Task("t", "", "", [Field("a", "string"), Field("b", "number")])

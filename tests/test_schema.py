@@ -1,7 +1,7 @@
 from pathlib import Path
 
 import pytest
-from extracteval.schema import load_task, Field
+from extracteval.schema import Field, load_task
 
 TASK = Path(__file__).resolve().parent.parent / "tasks" / "invoices.yaml"
 

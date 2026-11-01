@@ -4,10 +4,9 @@ import json
 from pathlib import Path
 
 import pytest
-
-from extracteval import __version__
 from extracteval.cli import cmd_compare, cmd_try, main
 
+from extracteval import __version__
 
 TASK = Path(__file__).resolve().parent.parent / "tasks" / "invoices.yaml"
 

@@ -1,5 +1,6 @@
-from extracteval.schema import Task, Field
-from extracteval.validate import validate_row, run_dataset_rules
+from extracteval.schema import Field, Task
+from extracteval.validate import run_dataset_rules, validate_row
+
 
 def _task():
     return Task("t", "", "", [

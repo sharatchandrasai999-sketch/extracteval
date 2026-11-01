@@ -1,5 +1,6 @@
-from extracteval.schema import Task, Field
-from extracteval.score import field_correct, score_one, aggregate
+from extracteval.schema import Field, Task
+from extracteval.score import aggregate, field_correct, score_one
+
 
 def _task():
     return Task("t", "", "", [Field("amt", "number"), Field("name", "string")])
