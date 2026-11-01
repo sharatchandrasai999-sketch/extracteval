@@ -9,5 +9,7 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install -e ".[dev]"
+      - run: pip install ruff
+      - run: ruff check src tests
       - run: pytest -q
       - run: extracteval run tasks/invoices.yaml   # smoke test the CLI (offline)
