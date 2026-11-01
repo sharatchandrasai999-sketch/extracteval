@@ -13,10 +13,11 @@ Providers shipped here:
 """
 
 from __future__ import annotations
-import re
-import json
-import time
+
 import hashlib
+import json
+import re
+import time
 
 from .schema import Task
 
@@ -30,8 +31,8 @@ PRICES = {
 
 
 def _build_prompt(text: str, task: Task) -> str:
-    lines = ["Extract the following fields and return ONLY a JSON object "
-             "(no prose, no markdown fences).", "", "Fields:"]
+    lines = [("Extract the following fields and return ONLY a JSON object "
+              "(no prose, no markdown fences)."), "", "Fields:"]
     for f in task.fields:
         hint = {
             "date": " (normalize to YYYY-MM-DD)",
@@ -114,7 +115,7 @@ _SUFFIX = (r"(?:LLC|Inc|Ltd|Co|Corp|Group|Industries|Holdings|Partners|"
 def _invoices(text):
     inv = None
     m = re.search(r"(?:invoice|inv|receipt|bill ref|ref|no\.?|number)\b[#:\s.\-]*"
-                  r"([A-Za-z]?[\-]?\d[A-Za-z0-9\-]*)", text, re.I)
+                  r"([A-Za-z]?[\-]?\d[A-Za-z0-9\-]*)", text, re.IGNORECASE)
     if m:
         inv = m.group(1).lstrip("#")
     elif (m := re.search(r"#\s*([A-Za-z0-9\-]*\d[A-Za-z0-9\-]*)", text)):

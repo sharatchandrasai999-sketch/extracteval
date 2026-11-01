@@ -3,13 +3,14 @@
     streamlit run src/extracteval/app.py
 """
 
-import os
 import glob
 import json
+import os
+
 import streamlit as st
 
-from extracteval.schema import load_task
 from extracteval.extract import get_provider
+from extracteval.schema import load_task
 
 st.set_page_config(page_title="ExtractEval", page_icon="🧪", layout="centered")
 st.title("🧪 ExtractEval")
@@ -59,8 +60,8 @@ with tab_try:
             out, cost, _ = fn(text, task, None)
         else:
             out, cost, _ = fn(text, task, "claude-haiku-4-5-20251001")
+        from extracteval.confidence import route, score_confidence
         from extracteval.validate import validate_row
-        from extracteval.confidence import score_confidence, route
         violations = validate_row(task, out)
         conf = score_confidence(task, out, violations)
         decision = route(conf, violations)
@@ -84,7 +85,8 @@ with tab_try:
 with tab_eval:
     latest = os.path.join("results", f"{task.name}_latest.json")
     if os.path.exists(latest):
-        data = json.load(open(latest))
+        with open(latest) as fh:
+            data = json.load(fh)
         m = data["metrics"]
         st.subheader(f"`{m['model']}` · {m['n_cases']} cases")
         cols = st.columns(len(task.fields) + 1)

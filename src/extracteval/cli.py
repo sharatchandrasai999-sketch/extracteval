@@ -6,16 +6,17 @@
 """
 
 from __future__ import annotations
+
+import argparse
+import json
 import os
 import sys
-import json
-import argparse
 
 from . import __version__
-from .schema import load_task
 from .extract import get_provider
-from .runner import run_eval, compare, save_results
-from .report import print_run, print_leaderboard
+from .report import print_leaderboard, print_run
+from .runner import compare, run_eval, save_results
+from .schema import load_task
 
 RESULTS_DIR = os.environ.get("EXTRACTEVAL_RESULTS", "results")
 

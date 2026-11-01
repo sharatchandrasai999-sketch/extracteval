@@ -1,15 +1,16 @@
 """Run an eval for one provider, and compare several providers into a leaderboard."""
 
 from __future__ import annotations
-import os
-import json
-from datetime import datetime, timezone
 
-from .schema import Task
+import json
+import os
+from datetime import UTC, datetime
+
+from .confidence import route, routing_summary, score_confidence
 from .extract import get_provider
-from .score import score_one, aggregate
-from .validate import validate_row, run_dataset_rules
-from .confidence import score_confidence, route, routing_summary
+from .schema import Task
+from .score import aggregate, score_one
+from .validate import run_dataset_rules, validate_row
 
 
 def load_cases(task: Task) -> list[dict]:
@@ -55,7 +56,7 @@ def run_eval(task: Task, provider: str = "mock", model: str | None = None) -> di
         "task": task.name, "provider": provider, "model": label,
         "total_cost_usd": round(total_cost, 6),
         "avg_latency_s": round(total_latency / max(len(rows), 1), 4),
-        "timestamp": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "timestamp": datetime.now(UTC).isoformat(timespec="seconds"),
     })
     return {"metrics": metrics, "rows": rows}
 
